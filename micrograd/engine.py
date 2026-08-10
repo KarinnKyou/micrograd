@@ -46,7 +46,7 @@ class Value:
 
         return out
 
-    def __relu__(self, other):
+    def relu(self):
         out = Value(self.data if self.data > 0 else 0, (self,), "ReLU")
 
         def _backward():
